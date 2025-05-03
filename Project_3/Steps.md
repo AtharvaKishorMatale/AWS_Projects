@@ -11,7 +11,8 @@
 - Private Subnet: Used for backend components (like app servers and database).
 - What it does:
 - Subnets divide the VPC into smaller sections. Public ones can talk to the internet, private ones can’t unless you give them special access.
- ![Screenshot 2025-05-01 171215](https://github.com/user-attachments/assets/92e5568b-4b97-42c2-9843-80d8a4daa10f)
+ ![Screenshot 2025-05-01 171255](https://github.com/user-attachments/assets/bebc34d9-d052-4c9d-a4ae-b492737c2acf)
+
 
 # 3. Create an Internet Gateway
 - What it does:

@@ -22,7 +22,7 @@
 # 4. Attach Internet Gateway to VPC
 - What it does:
 - Connects your VPC to the internet through the gateway so traffic can flow in and out.
-![Screenshot 2025-05-01 171100](https://github.com/user-attachments/assets/d2d52706-f6d7-4114-8679-660d45dedb6f)
+![Screenshot 2025-05-03 142516](https://github.com/user-attachments/assets/0907744d-965f-4506-8768-139e3533ad9c)
 
 # 5. Create a Route Table for the Public Subnet
 - What it does:

@@ -34,7 +34,7 @@
 - Makes sure the public subnet actually uses the route to reach the internet.
 ![Screenshot 2025-05-01 171215](https://github.com/user-attachments/assets/34233231-8112-488b-aa6c-ec454632de24)
 
-# Web Server Setup
+# 7 Web Server Setup
 - Steps:
 - Launch EC2 in public subnet with auto-assign public IP.
 - Create security group allowing:
@@ -46,35 +46,36 @@
 - Access site using public IP in browser.
  ![Screenshot 2025-05-01 171845](https://github.com/user-attachments/assets/f5bbc86d-d6e4-4978-be1e-e26237c14076)
 
-# 9. Create a NAT Gateway in Public Subnet
+# 8. Create a NAT Gateway in Public Subnet
 - What it does:
 - Lets the private subnet connect to the internet for updates/downloads but blocks external traffic from directly accessing it.
  ![Screenshot 2025-05-01 173303](https://github.com/user-attachments/assets/9a705992-e70a-4be0-9940-ea5fe6781a5f)
 
-# 10. Update Route Table for Private Subnet
+# 9. Update Route Table for Private Subnet
 - What it does:
 - Routes traffic from private subnet to the internet using the NAT Gateway instead of the Internet Gateway.
 ![Screenshot 2025-05-01 173939](https://github.com/user-attachments/assets/87cd19a0-81d3-41a5-9103-6eda550a3ca8)
 
-# Appserver setup
+# 10 Appserver setup
 # Steps
 - Launch EC2 in private subnet, no public IP.
 - Create security group to allow:
 - SSH only from Web Server.
 - SSH into it via Web Server (jump host).
+![Screenshot 2025-05-01 172148](https://github.com/user-attachments/assets/4d3b7e96-9a0e-42f2-943e-607b53dc2200)
+![Screenshot 2025-05-01 172811](https://github.com/user-attachments/assets/82c37b08-8b59-4bd5-8385-2a4f46b17a44)
 
-# db-server setup
-# 13. Launch RDS (Database) in Another Private Subnet
+# 11 db-server setup
+# 12. Launch RDS (Database) in Another Private Subnet
 - What it does:
 - Creates a managed database that’s secure and only accessible from the app server.
 ![Screenshot 2025-05-01 172258](https://github.com/user-attachments/assets/58682d2f-ed1b-44e9-a6d3-0d5168ff22a8)
-
-# 14. Create Security Group for Database
+- Create Security Group for Database
 - What it does:
 - Ensures only the app server can connect to the database (e.g., allow traffic on port 3306 for MySQL).
 ![Screenshot 2025-05-01 173046](https://github.com/user-attachments/assets/d9643cc4-cef9-49df-9fd4-96b9b04fb2e4)
 
-# 15. Test Connectivity Between Tiers
+# 13. Test Connectivity Between Tiers
 - What it does:
 Checks that:
 
